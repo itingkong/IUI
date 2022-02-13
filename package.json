@@ -1,0 +1,35 @@
+{
+  "name": "IUI",
+  "version": "0.0.1",
+  "description": "",
+  "main": "/src/index.js",
+  "scripts": {
+    "dev": "node ./build/server.js",
+    "build": "webpack --config ./config/prod.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "sideEffects": ["*.less", "*.css"],
+  "keywords": [],
+  "author": "itingkong",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.12",
+    "@babel/plugin-transform-runtime": "^7.16.10",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.5.1",
+    "html-webpack-plugin": "^5.5.0",
+    "less": "^4.1.2",
+    "less-loader": "^10.2.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.67.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.3",
+    "webpack-merge": "^5.8.0"
+  }
+}

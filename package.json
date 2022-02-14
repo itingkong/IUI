@@ -8,7 +8,10 @@
     "build": "webpack --config ./config/prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "sideEffects": ["*.less", "*.css"],
+  "sideEffects": [
+    "*.less",
+    "*.css"
+  ],
   "keywords": [],
   "author": "itingkong",
   "license": "ISC",

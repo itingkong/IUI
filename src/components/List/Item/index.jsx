@@ -1,12 +1,10 @@
-import React from "react";
 import styles from "./index.less";
 
-export default class Item extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-
-	render() {
-		return <li className={styles.item}>{this.props.children}</li>;
-	}
+export default function Item(props) {
+	const { className = "", style = {} } = props;
+	return (
+		<li className={`${styles.item} ${className}`} style={style}>
+			{props.children}
+		</li>
+	);
 }

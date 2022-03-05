@@ -16,10 +16,13 @@ export default class Left extends React.Component {
 
 	render() {
 		const { mini } = this.state;
-		const { showMiniBtn = false } = this.props;
+		const { showMiniBtn = false, className = "", style = {} } = this.props;
 
 		return (
-			<div className={`${styles.left} ${mini ? styles.left_mini : styles.left_regular}`}>
+			<div
+				className={`${styles.left} ${mini ? styles.left_mini : styles.left_regular} ${className}`}
+				style={style}
+			>
 				<div className={styles.left_content}>{this.props.children}</div>
 				{showMiniBtn && (
 					<div className={styles.left_btn} onClick={this.minimiseHandler}>

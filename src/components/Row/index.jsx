@@ -3,7 +3,7 @@ import styles from "./index.less";
 import { RowContext } from "utils/context";
 
 export default function Row(props) {
-	const { height = 0 } = props;
+	const { height = 0, className = "", style = {} } = props;
 	const rowRef = useRef(null);
 	let [curWidth, setCurWidth] = useState(0);
 	let [childCount, setChildCount] = useState(0);
@@ -16,8 +16,8 @@ export default function Row(props) {
 		<RowContext.Provider value={{ ...props, width: curWidth, childCount }}>
 			<div
 				ref={rowRef}
-				className={`${styles.row} ${height ? styles.row_limitHeight : ""}`}
-				style={{ height: Number(height) || "inherit" }}
+				className={`${styles.row} ${height ? styles.row_limitHeight : ""} ${className}`}
+				style={{ height: Number(height) || "inherit", ...style }}
 			>
 				{props.children}
 			</div>

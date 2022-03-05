@@ -1,0 +1,27 @@
+@import url(/static/theme/dark.less);
+
+.tree {
+	background-color: @border_color;
+	&_item {
+		padding-left: 0.12rem;
+
+		&_content {
+			display: flex;
+			font-size: 0.16rem;
+			border-bottom: 0.01rem solid silver;
+		}
+
+		&_text {
+			cursor: pointer;
+			user-select: none;
+		}
+	}
+
+	.hide {
+		display: none;
+	}
+
+	.show {
+		display: block;
+	}
+}

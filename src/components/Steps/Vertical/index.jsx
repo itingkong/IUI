@@ -12,6 +12,7 @@ import styles from "../index.less";
 export default function Vertical(props) {
 	const { data, current = 0, circleType = "1" } = props;
 
+	// 计算步骤样式
 	const circleStyle = i => {
 		// current 为当前进度索引
 		return i < current || current === data.length - 1 ? styles.actived : i === current ? styles.current : "";
@@ -38,7 +39,7 @@ export default function Vertical(props) {
 						<p className={styles.item_title}>{item.title}</p>
 
 						{/* step describe */}
-						{item.desc ? <p className={styles.item_desc}>{item.desc}</p> : null}
+						{item.desc && <p className={styles.item_desc}>{item.desc}</p>}
 
 						{/* extra template */}
 						{item.template || null}
